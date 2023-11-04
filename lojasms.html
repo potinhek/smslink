@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+<link rel="stylesheet" href="smslink.css">
+<link rel="stylesheet" href="lojasms.css">
+<script src="smslink.js"></script>
+<script src="lojasms.js"></script>
+
+<body>
+    <h1 id="sl">SamasLink</h1>
+    <br>
+    <div class="buttonic">
+        <a onclick="paginc()">Pagina Inicial</a>
+        <a onclick="smssl()">Soluções</a>
+        <a onclick="lojasms()">Loja</a>
+        <a onclick="acess()">
+            <img src="imagens/person_FILL0_wght400_GRAD0_opsz24.png" alt="" srcset="">
+        </a>
+
+    </div>
+    <br>
+    <p>Escolha a categoria</p>
+    <select id="ctrloja" onchange="categoria(ctrloja.value)">
+        <option value="router">Roteadores/ Cabos</option>
+        <option value="hardwpc">Hardware/pc</option>
+        <option value="acessory">Acessorios</option>
+    </select>
+   
+        <img class="carbuy"src="imagens/shopping_cart_FILL0_wght400_GRAD0_opsz24.png" alt="" srcset="">
+  
+<br>
+<br>
+    <hr>
+
+    <div id="acessorio" hidden>
+        <div class="ljacessory">
+            <label for="msrazer">Mouse Razer</label>
+            <br>
+            <img src="https://m.media-amazon.com/images/I/717NPEAEL1L._AC_SX679_.jpg" width="100px" alt="" srcset="">
+            <br>
+            <label for="valor">R$150,00</label><br>
+            <input type="number" name="qtd" id="qtdmsrazer" placeholder="Quantidade" min="0" onblur="qtdproduto(parseInt(qtdmsrazer.value))">
+            <br>
+            <input type="button" value="Adicionar ao Carrinho" onclick="addms(qtdmsrazer.value)">
+        </div>
+        <div class="ljacessory">
+            <label for="teclado">Teclado</label>
+            <br>
+            <img src="https://a-static.mlcdn.com.br/800x560/teclado-movitec-otf-01-usb-abnt2-preto/magazineluiza/225991300/0182765ab12cbc6602d0e87ef3542208.jpg" width="100px" alt="" srcset="">
+            <br>
+            <label for="valor">R$300,00</label><br>
+            <input type="number" name="qtd" id="qtdteclado" placeholder="Quantidade" min="0" onblur="qtdproduto(parseInt(qtdteclado.value))">
+            <br>
+            <input type="button" value="Adicionar ao Carrinho" onclick="addtl(qtdteclado.value)">
+        </div>
+    </div>
+    <div id="roteador" hidden>
+        <p>Roteador</p>
+    </div>
+
+    <div id="hardware" hidden>
+        <p>Hardware</p>
+    </div>
+</body>
+
+</html>

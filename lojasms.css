@@ -1,0 +1,17 @@
+*{
+   margin: 0px;
+   padding: 0px;
+}
+#acessorio{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+}
+.ljacessory{
+    border: 1px solid black;
+    
+}
+.carbuy{
+    float: right;
+}

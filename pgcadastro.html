@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+<script src="smslink.js"></script>
+<link rel="stylesheet" href="smslink.css">
+<script src="smslink.js"></script>
+<style>
+    .cdt{
+        text-align: center;
+        width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        border: black 1px solid;
+        padding: 10px;
+        background: white;
+        border-radius: 30px;
+    }
+    main{
+        text-align: center;
+        margin-top: 100px;
+    }
+    .videoback{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+    video{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+   
+   
+</style>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+    </head>
+
+    <body>
+        <div class="videoback">
+            <video src="imagens/fundotec.mp4.mp4" autoplay loop muted></video>
+        </div>
+        <header></header>
+        <section>
+            <form action="">
+                <main>
+                <div class="cdt">
+                    <img src="imagens/logo.png" width="80px" height="80px" alt="" srcset="" onclick="logo()">
+                    <h1>Cadastro SamasLink</h1>
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" name="name" id="name" required maxlength="30">
+                    <br>
+                    <label for="dtnasc">Data de Nascimento</label>
+                    <input type="date" name="dtnasc" id="dtnasc" required onblur="datnasc(dtnasc.value)">
+                    <br>
+                    <label for="number">Numero de Telefone:</label>
+                    <input type="number" value="number" name="number" required minlength="11" maxlength="11">
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" required maxlength="30">
+                    <br>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" required minlength="6" maxlength="15">
+                    <br>
+                    <input type="submit" onclick="cadastrar()">
+                </main>
+            </div>
+            </form>
+
+        </section>
+        <script>
+            function cadastrar(){
+                alert("Cadastro realizado com sucesso!")
+            }
+            function datnasc(ano){
+                let dataatual= new Date
+                let anoatual= dataatual.getFullYear()
+                if(ano<=anoatual){
+                
+                }else{
+                    alert("Verifique data")
+                    document.getElementById('dtnasc').innerHTML= dataatual
+                }
+            }
+
+        </script>
+        
+    </body>
+
+
+    </html>
+</body>
+
+</html>

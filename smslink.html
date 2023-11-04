@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+<script src="smslink.js"></script>
+<link rel="stylesheet" href="smslink.css">
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+
+    .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        /* Estilos para o conteúdo acima do vídeo */
+    }
+
+    #sli {
+        text-align: center;
+        color: black;
+    }
+
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #login{
+        border: 3px solid white;
+        align-items: center;
+        color: black;
+        text-align: center;
+        border-radius: 20px ;
+        background-color: white;
+    }
+</style>
+
+<body>
+    <div class="background-video">
+        <video src="imagens/fundotec.mp4.mp4" autoplay loop muted></video>
+    </div>
+    <div id="login">
+        <img src="imagens/logo.png" width="80px" height="80px" alt="" srcset="" onclick="logo()">
+        <h1 id="sli">SamasLink</h1>
+        <br>
+        <label for="email">Email</label> <br>
+        <input type="email" name="email" id="email"><br>
+        <label for="pass">Senha</label><br>
+        <input type="text" name="pass" id="pass"><br>
+        <input type="button" value="Acessar" onclick="acessms((email.value), (pass.value))">
+        <br>
+        <a href="pgcadastro.html">Não tem cadastro?</a>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
